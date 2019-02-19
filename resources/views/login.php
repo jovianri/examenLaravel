@@ -13,7 +13,7 @@
     <div id="loginForm">
         <form name="login" action="/compruebaLogin" method="post">
             <?php echo csrf_field(); ?>
-            <input type="text" class="inputAuth" name="nombreusuario" placeholder="Nombre de usuario" required/>
+            <input type="text" class="inputAuth" name="nombre" placeholder="Nombre de usuario" required/>
             <input type="password" class="inputAuth" name="password" placeholder="Password" required/>
             <button id="authButton" type="submit">OK</button>
         </form>

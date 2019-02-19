@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Tymon\JWTAuth\Contracts\JWTSubject;	
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -19,7 +18,7 @@ class User extends Authenticatable
     protected $table = "usuarios";
 
     protected $fillable = [
-        'name', 'nombreusuario', 'password',
+        'id_usuario', 'nombre', 'password',
     ];
 
     /**

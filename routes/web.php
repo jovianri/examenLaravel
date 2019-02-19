@@ -1,5 +1,4 @@
 <?php
-use \Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,34 +12,28 @@ use \Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    return view('inicio');
+    return view('portada');
 });
 
-Route::get('/historia', function () {
-    return view('historia');
+Route::get('/equipos', function () {
+    return view('equipos');
 });
 
-Route::get('/jugadores', function () {
-    return view('jugadores');
+Route::get('/equipo/{id}', function ($id) {
+    return view('equipo')->with(['id' => $id]);
+});
+
+Route::get('/equipo/jugadores/{id}', function ($id) {
+    return view('jugadores')->with(['id' => $id]);
 });
 
 Route::get('/jugador/{id}', function ($id) {
-    return view('jugador',['id' => $id]);
+    return view('jugador')->with(['id' => $id]);
 });
 
-Route::get('/partidos', function () {
-    return view('partidos');
+Route::get('/jugador/estadisticas/{id}', function ($id) {
+    return view('estadisticas')->with(['id' => $id]);
 });
-
-Route::post('/partidos', function () {
-    return view('partidos');
-});
-
-Route::get('/registrarse', function () {
-    return view('registrarse');
-});
-
-Route::post('/registrarse', 'usuario@registrarse');
 
 Route::get('/login', function () {
     return view('login');
