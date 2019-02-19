@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Portada</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/estilos.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/estilos.css" />
 </head>
 <body>
 <?php
-    include "menu.html";
+    include "menu.php";
 ?>
 <div id="content">
-    <img src="images/NBALogo.png" />  
+    Página de historia
 </div>    
 </body>
 </html>
